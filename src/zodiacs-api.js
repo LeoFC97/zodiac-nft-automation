@@ -12,7 +12,7 @@ async function startRace(carId){
             _ApplicationId: 'CtQ62LvQpO7aQ5YXWUp3AfzPkQAU8PASxvUhfl2S',
             _ClientVersion: 'js0.0.46',
             _InstallationId: '5c987e0f-0e58-4516-9d8f-c0e07e7d000a',
-            _SessionToken: 'r:207d5193a08438c28e4730a1226b2f94'
+            _SessionToken: `${process.env._SessionToken}`
         }
     };
 
@@ -35,14 +35,15 @@ async function claimReward(carId){
             _ApplicationId: 'CtQ62LvQpO7aQ5YXWUp3AfzPkQAU8PASxvUhfl2S',
             _ClientVersion: 'js0.0.46',
             _InstallationId: '5c987e0f-0e58-4516-9d8f-c0e07e7d000a',
-            _SessionToken: 'r:207d5193a08438c28e4730a1226b2f94'
+            _SessionToken: `${process.env._SessionToken}`
         }
     };
 
-    await axios.request(options)
+    return await axios.request(options)
     }
     catch (err) {
         console.log(err);
+        return 'deu merda rs';
     }
 
 }

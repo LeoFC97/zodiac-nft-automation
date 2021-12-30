@@ -13,7 +13,7 @@ const arrayOfCars = require('./cars');
                 await startRace(arrayOfCars[i]);
                 await sleep(12*1000);
                 const resultOfCurrentRace = await claimReward(arrayOfCars[i]);
-                console.log(`raceResult: ${JSON.stringify(raceResult)}`);
+                console.log(`raceResult: ${resultOfCurrentRace}`);
                 listOfRaceResults.push(resultOfCurrentRace);
             }
         };
