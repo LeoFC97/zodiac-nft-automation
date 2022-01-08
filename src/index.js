@@ -8,7 +8,7 @@ const arrayOfCars = require('./cars');
         var listOfRaceResults = [{}];
         for (let i = 0; i < arrayOfCars.length; i++) {
             console.log(`carId dentro do primeiro for: ${arrayOfCars[i]}`)
-            for(j=0;j<12;j++){
+            for(j=0;j<6;j++){
                 console.log(`carId dentro do segundo for: ${arrayOfCars[i]}`);
                 await startRace(arrayOfCars[i]);
                 await sleep(12*1000);
