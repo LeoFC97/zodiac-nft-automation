@@ -5,7 +5,7 @@ async function startRace(carId){
     console.log(`carId: ${carId}`);
     const options = {
         method: 'POST',
-        url: "https://8za04rmw3eb0.grandmoralis.com:2053/server/functions/battlefield_startRace",
+        url: "https://prfnbjckmlbo.usemoralis.com:2053/server/functions/battlefield_startRace",
         headers: {
             'Content-Type': 'application/json',
             'authority': 'https://8za04rmw3eb0.grandmoralis.com:2053',
@@ -15,9 +15,9 @@ async function startRace(carId){
         },
         data: {
             userCarId: carId,
-            _ApplicationId: 'CtQ62LvQpO7aQ5YXWUp3AfzPkQAU8PASxvUhfl2S',
-            _ClientVersion: 'js0.0.46',
-            _InstallationId: '5c987e0f-0e58-4516-9d8f-c0e07e7d000a',
+            _ApplicationId: `${process.env.ApplicationId}`,
+            _ClientVersion: `${process.env.ClientVersion}`,
+            _InstallationId: `${process.env.InstallationId}`,
             _SessionToken: `${process.env.SessionToken}`
         }
     };
@@ -35,7 +35,7 @@ async function claimReward(carId){
     try {
     const options = {
         method: 'POST',
-        url: "https://8za04rmw3eb0.grandmoralis.com:2053/server/functions/battlefield_claimReward",
+        url: "https://prfnbjckmlbo.usemoralis.com:2053/server/functions/battlefield_claimReward",
         headers: {
             'Content-Type': 'application/json',
             'authority': 'https://8za04rmw3eb0.grandmoralis.com:2053',
@@ -43,9 +43,9 @@ async function claimReward(carId){
         },
         data: {
             userCarId: carId,
-            _ApplicationId: 'CtQ62LvQpO7aQ5YXWUp3AfzPkQAU8PASxvUhfl2S',
-            _ClientVersion: 'js0.0.46',
-            _InstallationId: '5c987e0f-0e58-4516-9d8f-c0e07e7d000a',
+            _ApplicationId: `${process.env.ApplicationId}`,
+            _ClientVersion: `${process.env.ClientVersion}`,
+            _InstallationId: `${process.env.InstallationId}`,
             _SessionToken: `${process.env.SessionToken}`
         }
     };
