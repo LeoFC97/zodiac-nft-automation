@@ -13,7 +13,7 @@ const arrayOfCars = require('./cars');
                 const raceWasStarted = await startRace(arrayOfCars[i]);
                 console.log(`raceWasStarted: ${raceWasStarted}`);
                 if(raceWasStarted){
-                    await sleep(getRandomInt(35,60)*1000);
+                    await sleep(getRandomInt(35,40)*1000);
                 }
                 const resultOfCurrentRace = await claimReward(arrayOfCars[i]);
                 console.log(resultOfCurrentRace);
